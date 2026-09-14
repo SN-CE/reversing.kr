@@ -5,7 +5,7 @@ A collection of writeups and solutions for challenges from [Reversing.kr](https:
 The goal of this repository is to document my approach to each challenge, including analysis, reverse engineering techniques, relevant tools, and the final solution.
 
 ## Challenges
-
+- easy_elf
 
 ## Tools
 
