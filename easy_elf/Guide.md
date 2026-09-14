@@ -43,7 +43,7 @@ We check `fcn.08048434` first. We are faced with this line:
 0x0804844a      call    __isoc99_scanf
 ```
 
-So this is the function that takes in input. We can leave this alone. But before we do, we must keep one address in mine: `0x804a020`. We see this in: 
+So this is the function that takes in input. We can leave this alone. But before we do, we must keep one address in mind: `0x804a020`. We see this in: 
 
 ```asm
 0x0804843a      mov     eax, data.08048650 ; 0x8048650
