@@ -131,7 +131,7 @@ After this we see another comparison snippet, that is unlike the rest:
 0x080484b8      jmp     0x80484f5
 ```
 
-The sixth character is being moved into `eax`. It is then being `test` -ed against itself. And if it's equal(`je`, although the more contextually clear instruction would be `jz`) or rather, if the zero flag is set, meaning that the character at `al` and `0x804a025`, was `0`(since `test` performs bitwise `AND`). `0` here refers to `0x00`, which is the null terminator. So this whole block checks if the sixth character is a null-terminator, which is only possible if the string has 5 characters. Now we know that the flag is a 5 character string.
+The sixth character is being moved into `eax`. It is then being `test` -ed against itself. `test` performs bitwise `and`, thus if the value in al is 0, then and only then will the zero flag be set. Which brings us to the next line, `je 0x80484ba`(`je`, although the more contextually clear instruction would be `jz`) which is, if the zero flag is set it will not jump to the failure condition and proceed as intended. `0` here refers to `0x00`, which is the null terminator. So this whole block checks if the sixth character is a null-terminator, which is only possible if the string has 5 characters. Now we know that the flag is a 5 character string.
 
 ***
 
