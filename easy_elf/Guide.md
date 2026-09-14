@@ -17,7 +17,7 @@ But to be sure that this `cmp eax, 1` is where the check is happening, we trace 
 0x0804857d      ret
 ```
 
-So we see that if the `jne` jump does not happen, it calls a function, then after executing that function, it moves `0` into `eax` and jumps directly to `0x0804857c`, wherein the function exits. So the `cmp eax, 1` is quite possible the check we need. But to be even more sure, we check the function `fcn.080484f7`.
+So we see that if the `jne` jump does not happen, it calls a function, then after executing that function, it moves `0` into `eax` and jumps directly to `0x0804857c`, wherein the function exits. So the `cmp eax, 1` is quite possibly the check we need. But to be even more sure, we check the function `fcn.080484f7`.
 And when we do, we see this line:
 
 ```asm
